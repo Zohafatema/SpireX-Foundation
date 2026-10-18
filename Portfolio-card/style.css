@@ -1,0 +1,610 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cream: #f8f5ef;
+    --white: #fffdf9;
+    --dark: #25221f;
+    --brown: #806b5a;
+    --muted: #8e8780;
+    --accent: #b28b68;
+    --line: #e8e1d8;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 20px;
+
+    font-family: "DM Sans", sans-serif;
+
+    color: var(--dark);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4eee6,
+            #eee8df
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* Background decoration */
+
+.bg-circle {
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    opacity: 0.45;
+
+    z-index: -1;
+}
+
+.circle-one {
+    background: #d9c5ae;
+
+    top: -100px;
+    left: -80px;
+}
+
+.circle-two {
+    background: #cfc8b9;
+
+    right: -100px;
+    bottom: -100px;
+}
+
+
+/* Main Card */
+
+.card {
+    width: 100%;
+    max-width: 550px;
+
+    background: rgba(255, 253, 249, 0.9);
+
+    border: 1px solid rgba(255,255,255,0.8);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(80, 65, 50, 0.13);
+
+    backdrop-filter: blur(15px);
+
+    animation: appear 0.8s ease;
+}
+
+
+/* Profile */
+
+.profile {
+    padding: 45px 35px 35px;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* Profile Photo */
+
+.profile-photo {
+    width: 82px;
+    height: 82px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8c735f,
+            #b4977d
+        );
+
+    border: 5px solid #eee7dd;
+
+    box-shadow:
+        0 10px 25px rgba(100, 80, 60, 0.2);
+}
+
+
+/* Status */
+
+.status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 6px 11px;
+
+    margin-bottom: 13px;
+
+    border-radius: 20px;
+
+    color: #68755d;
+
+    background: #edf1e9;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.status span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #7b9b69;
+
+    box-shadow: 0 0 0 4px rgba(123,155,105,0.12);
+}
+
+
+/* Name */
+
+.profile h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 42px;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 4px;
+}
+
+
+.designation {
+    color: var(--brown);
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.designation span {
+    color: #c5b4a2;
+
+    margin: 0 5px;
+}
+
+
+.intro {
+    max-width: 390px;
+
+    margin: 15px auto 20px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* Socials */
+
+.socials {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 9px;
+}
+
+
+.socials a {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--brown);
+
+    background: #f1ece5;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+
+.socials a:hover {
+    color: white;
+
+    background: var(--brown);
+
+    transform: translateY(-3px);
+}
+
+
+/* Sections */
+
+.section {
+    padding: 27px 35px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+.heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 13px;
+}
+
+
+.heading span {
+    color: var(--accent);
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+.heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 19px;
+}
+
+
+.description {
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* Skills */
+
+.skills {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.skills span {
+    padding: 7px 12px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 20px;
+
+    color: var(--brown);
+
+    background: #fbf8f3;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.skills span:hover {
+    color: white;
+
+    background: var(--brown);
+
+    border-color: var(--brown);
+
+    transform: translateY(-2px);
+}
+
+
+/* Project */
+
+.project {
+    padding: 18px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    background: #fdfaf6;
+
+    transition: 0.3s ease;
+}
+
+
+.project:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px rgba(100, 80, 60, 0.08);
+}
+
+
+.project-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 13px;
+}
+
+
+.project-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #9b8067,
+            #c2a689
+        );
+
+    font-size: 17px;
+}
+
+
+.project-arrow {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--brown);
+
+    background: #f0ebe3;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition: 0.3s ease;
+}
+
+
+.project-arrow:hover {
+    color: white;
+
+    background: var(--brown);
+}
+
+
+.project h3 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+
+    margin-bottom: 6px;
+}
+
+
+.project p {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    margin-bottom: 12px;
+}
+
+
+/* Project Technologies */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+}
+
+
+.project-tech span {
+    padding: 4px 8px;
+
+    border-radius: 5px;
+
+    color: #806b5a;
+
+    background: #eee7dd;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* Contact */
+
+.contact {
+    padding: 35px;
+
+    text-align: center;
+}
+
+
+.contact > p {
+    color: var(--muted);
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+
+.contact h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+
+.contact h2 i {
+    color: var(--accent);
+}
+
+
+.contact-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 11px 19px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    background: var(--dark);
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+
+.contact-btn:hover {
+    background: var(--brown);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(70,55,40,0.15);
+}
+
+
+/* Footer */
+
+footer {
+    padding: 15px;
+
+    text-align: center;
+
+    color: #aaa198;
+
+    background: #f5f0e9;
+
+    font-size: 9px;
+}
+
+
+/* Animation */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .card {
+        border-radius: 23px;
+    }
+
+    .profile {
+        padding: 35px 22px 28px;
+    }
+
+    .profile h1 {
+        font-size: 36px;
+    }
+
+    .section {
+        padding: 23px 22px;
+    }
+
+    .contact {
+        padding: 28px 22px;
+    }
+}
