@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My personal CV and resume card">
+  <title>My Resume | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#" class="logo">My<span>Resume.</span></a>
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">☾</button>
+  </header>
+
+  <main class="resume-container">
+    <section class="profile-card">
+      <div class="profile-top">
+        <div class="avatar">ZF</div>
+        <span class="availability"><span class="dot"></span> Open to opportunities</span>
+      </div>
+
+      <p class="eyebrow">HELLO, I'M</p>
+      <h1>Zoha Fatema</h1>
+      <h2>Frontend Developer</h2>
+      <p class="intro">
+        Passionate about building beautiful, responsive, and user-friendly
+        websites using modern web technologies.
+      </p>
+
+      <div class="social-links">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+
+      <button id="downloadBtn" class="primary-btn">↓ Download Resume</button>
+
+      <div class="contact-box">
+        <h3>Contact Information</h3>
+        <p>✉ <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>☎ <a href="tel:+910000000000">+91 00000 00000</a></p>
+        <p>⌖ Aurangabad, Maharashtra, India</p>
+      </div>
+    </section>
+
+    <div class="details">
+      <section class="section-card">
+        <div class="section-heading">
+          <span class="section-icon">✦</span>
+          <h3>About Me</h3>
+        </div>
+        <p>
+          I am an aspiring frontend developer who enjoys turning creative ideas
+          into interactive web experiences. I focus on clean code, responsive
+          layouts, accessibility, and continuous learning.
+        </p>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <span class="section-icon">▤</span>
+          <h3>Education</h3>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <h4>Bachelor's Degree</h4>
+            <p class="muted">DR. BABASAHEB AMBEDKER MARATHWADA UNIVERSITY (BAMU), AURANGABAD</p>
+            <p> Bachelor of Computer Science (B.C.S) </p>
+            <p class="date">2024 – 2027</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <h4>Higher Secondary Education</h4>
+            <p class="muted">MAHARASHTRA STATE BOARD OF SECONDARY & HIGHER SECONDARY EDUCATION, PUNE</p>
+            <p class="date">2021 – 2023</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <span class="section-icon">⌘</span>
+          <h3>Technical Skills</h3>
+        </div>
+        <div class="skills">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Responsive Design</span>
+          <span>Git & GitHub</span>
+          <span>React</span>
+          <span>UI/UX Basics</span>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <span class="section-icon">✧</span>
+          <h3>Experience</h3>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-dot"></span>
+          <div>
+            <h4>Frontend Development Intern</h4>
+            <p class="muted">SpireX Foundation</p>
+            <p class="date">Internship</p>
+            <P> Sep 2026 - Present </P>
+            <p>
+              Practiced frontend development and built web projects using
+              HTML, CSS, and JavaScript.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <span class="section-icon">◈</span>
+          <h3>Featured Projects</h3>
+        </div>
+        <div class="project">
+          <h4>Accessibility Colour Lab</h4>
+          <p> Developed a web-based accessibility tool to check colour contrast ratios and improve readability using WCAG guidelines.</p>
+          <!-- <p>A tool for checking colour contrast and improving web readability.</p> -->
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+        <div class="project">
+          <h4>Personal Portfolio Card</h4>
+          <p>A responsive profile card showcasing skills, projects, and contact details.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-heading">
+          <span class="section-icon">☆</span>
+          <h3>Achievements</h3>
+        </div>
+        <div class="achievement">
+          <span>🏆</span>
+          <div>
+            <h4>3rd Position – Vibe Coding Competition</h4>
+            <p class="muted">Swayambhu, MGM College, Aurangabad</p>
+          </div>
+        </div>
+        <div class="achievement">
+          <span>🎓</span>
+          <div>
+            <h4>Frontend Development Internship</h4>
+            <p class="muted">SpireX Foundation</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Designed with ♥ by Zoha Fatema</p>
+    <p>© <span id="year"></span> All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
