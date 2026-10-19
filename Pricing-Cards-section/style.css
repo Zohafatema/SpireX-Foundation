@@ -1,0 +1,373 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap');
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f6f1ea;
+    color: #29251f;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* ===== MAIN PRICING SECTION ===== */
+.pricing {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 80px 25px;
+}
+
+/* ===== HEADING ===== */
+.intro {
+    max-width: 650px;
+    margin-bottom: 35px;
+}
+
+.intro span {
+    color: #9b6c72;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.intro h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 500;
+    line-height: 1.1;
+    margin: 12px 0 18px;
+}
+
+.intro p {
+    color: #777067;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ===== BILLING TOGGLE ===== */
+.billing {
+    display: flex;
+    width: fit-content;
+    padding: 5px;
+    background: #ebe3d9;
+    border-radius: 30px;
+    margin-bottom: 35px;
+}
+
+.billing button {
+    border: none;
+    background: transparent;
+    padding: 10px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: #746d64;
+    font-family: inherit;
+    font-size: 13px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.billing button.active {
+    background: #fffaf4;
+    color: #29251f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.billing small {
+    color: #a2636b;
+    margin-left: 5px;
+}
+
+/* ===== PRICING CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 22px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 500px;
+    padding: 30px;
+    background: #fffaf4;
+    border: 1px solid #e7ddd2;
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(65, 49, 35, 0.09);
+}
+
+/* Studio card slight offset */
+.card:nth-child(3) {
+    transform: translateY(18px);
+}
+
+.card:nth-child(3):hover {
+    transform: translateY(10px);
+}
+
+/* ===== FEATURED CARD ===== */
+.featured {
+    background: #d9cde5;
+    border-color: #c8b8d7;
+}
+
+.featured:hover {
+    transform: translateY(-10px);
+}
+
+.label {
+    position: absolute;
+    top: -13px;
+    right: 20px;
+    max-width: calc(100% - 40px);
+    background: #b7797e;
+    color: white;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    text-align: center;
+    transform: rotate(2deg);
+}
+
+/* ===== CARD CONTENT ===== */
+.number {
+    color: #aaa097;
+    font-size: 12px;
+    margin-bottom: 45px;
+}
+
+.card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.about {
+    color: #817970;
+    margin: 7px 0 28px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== PRICE ===== */
+.price {
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.price strong {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.price span {
+    color: #837b73;
+    font-size: 12px;
+}
+
+.line {
+    flex-shrink: 0;
+    height: 1px;
+    background: #ded3c7;
+    margin: 25px 0;
+}
+
+/* ===== FEATURES LIST ===== */
+.card ul {
+    list-style: none;
+    margin: 0 0 25px;
+    padding: 0;
+}
+
+.card li {
+    display: flex;
+    align-items: flex-start;
+    margin: 13px 0;
+    color: #625c55;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card li::before {
+    content: "✦";
+    flex-shrink: 0;
+    margin-right: 10px;
+    color: #b7797e;
+}
+
+/* ===== BUTTON FIX ===== */
+.choose {
+    position: static;
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    margin-top: auto;
+    padding: 13px 10px;
+    flex-shrink: 0;
+
+    border: 1px solid #d7c9bd;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #38332d;
+    font-family: inherit;
+    font-size: 14px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.choose:hover {
+    background: #29251f;
+    color: white;
+}
+
+.choose.dark {
+    background: #29251f;
+    color: white;
+    border-color: #29251f;
+}
+
+.choose.dark:hover {
+    background: #51483f;
+}
+
+/* ===== BOTTOM NOTE ===== */
+.bottom-note {
+    text-align: center;
+    margin-top: 75px;
+    color: #9a9188;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+    .pricing {
+        padding: 65px 22px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .card {
+        min-height: 480px;
+        padding: 26px;
+    }
+
+    .card:nth-child(3),
+    .card:nth-child(3):hover {
+        transform: none;
+    }
+
+    .featured:hover,
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .bottom-note {
+        margin-top: 35px;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+    .pricing {
+        padding: 50px 18px;
+    }
+
+    .intro {
+        margin-bottom: 28px;
+    }
+
+    .intro h1 {
+        font-size: clamp(36px, 10vw, 44px);
+        line-height: 1.12;
+    }
+
+    .intro p {
+        font-size: 14px;
+    }
+
+    .billing {
+        margin-bottom: 30px;
+    }
+
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .card {
+        min-height: 0;
+        padding: 26px 24px;
+        transform: none;
+    }
+
+    .card:nth-child(3),
+    .card:nth-child(3):hover,
+    .card:hover,
+    .featured:hover {
+        transform: none;
+    }
+
+    .number {
+        margin-bottom: 32px;
+    }
+
+    .price strong {
+        font-size: 44px;
+    }
+
+    .line {
+        margin: 22px 0;
+    }
+
+    .card ul {
+        margin-bottom: 24px;
+    }
+
+    .card li {
+        margin: 14px 0;
+    }
+
+    .choose {
+        margin-top: 4px;
+        min-height: 50px;
+    }
+
+    .bottom-note {
+        margin-top: 35px;
+    }
+}
+
+/* ===== SMALL MOBILE ===== */
+@media (max-width: 360px) {
+    .pricing {
+        padding: 40px 14px;
+    }
+
+    .card {
+        padding: 22px 18px;
+    }
+
+    .price strong {
+        font-size: 38px;
+    }
+
+    .billing button {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+}
