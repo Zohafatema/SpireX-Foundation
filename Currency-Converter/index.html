@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101827" />
+  <title>FX Studio — Currency Converter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="FX Studio home"><span class="brand-mark">↗</span><span>fx<span class="brand-light">studio</span></span></a>
+    <div class="top-right"><span class="live-dot"></span><span>Exchange rates, made simple</span><button class="icon-button" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">☼</button></div>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR MONEY, IN ANY CURRENCY</div>
+      <h1>World money.<br><span>One simple</span> conversion.</h1>
+      <p class="subhead">Convert currencies in seconds with current exchange rates from around the world.</p>
+    </section>
+
+    <section class="converter-card" aria-label="Currency converter">
+      <div class="card-top"><div><span class="mini-label">CURRENCY CONVERTER</span><h2>Make your move.</h2></div><div class="rate-status"><span class="live-dot"></span><span id="rateStatus">Ready to convert</span></div></div>
+      <div class="amount-panel">
+        <label for="amount">You send</label>
+        <div class="amount-row"><span class="currency-symbol" id="fromSymbol">₹</span><input id="amount" type="number" min="0" step="any" value="1000" inputmode="decimal" aria-label="Amount to convert"><span class="amount-unit" id="fromCodeLabel">INR</span></div>
+        <div class="select-row"><span class="flag" id="fromFlag">🇮🇳</span><select id="fromCurrency" aria-label="From currency"></select><span class="chevron">⌄</span></div>
+      </div>
+
+      <div class="swap-wrap"><div class="swap-line"></div><button id="swapBtn" class="swap-button" aria-label="Swap currencies" title="Swap currencies">⇅</button><div class="swap-line"></div></div>
+
+      <div class="amount-panel receive-panel">
+        <label for="result">They receive <span class="approx">≈ estimated amount</span></label>
+        <div class="amount-row"><span class="currency-symbol" id="toSymbol">$</span><output id="result" class="result-number">11.98</output><span class="amount-unit" id="toCodeLabel">USD</span></div>
+        <div class="select-row"><span class="flag" id="toFlag">🇺🇸</span><select id="toCurrency" aria-label="To currency"></select><span class="chevron">⌄</span></div>
+      </div>
+
+      <div class="rate-info"><span class="rate-icon">↗</span><div><strong id="rateText">1 INR = — USD</strong><small id="updatedText">Fetching the latest available rate…</small></div><button class="refresh-button" id="refreshBtn" title="Refresh exchange rate" aria-label="Refresh exchange rate">↻</button></div>
+      <button class="convert-button" id="convertBtn">Convert currency <span>→</span></button>
+      <p class="disclaimer" id="message" role="status">Rates are indicative and may differ from rates offered by banks or payment providers.</p>
+    </section>
+
+    <section class="quick-section">
+      <div class="section-heading"><div><span class="mini-label">QUICK CONVERSIONS</span><h2>Popular pairs</h2></div><span class="section-note">Tap a pair to try it</span></div>
+      <div class="quick-grid">
+        <button class="quick-card" data-from="USD" data-to="INR"><span class="pair-flags">🇺🇸 <i>→</i> 🇮🇳</span><span class="pair-name">USD <b>/</b> INR</span><span class="pair-desc">US Dollar to Indian Rupee</span><span class="pair-arrow">↗</span></button>
+        <button class="quick-card" data-from="EUR" data-to="USD"><span class="pair-flags">🇪🇺 <i>→</i> 🇺🇸</span><span class="pair-name">EUR <b>/</b> USD</span><span class="pair-desc">Euro to US Dollar</span><span class="pair-arrow">↗</span></button>
+        <button class="quick-card" data-from="GBP" data-to="INR"><span class="pair-flags">🇬🇧 <i>→</i> 🇮🇳</span><span class="pair-name">GBP <b>/</b> INR</span><span class="pair-desc">British Pound to Indian Rupee</span><span class="pair-arrow">↗</span></button>
+        <button class="quick-card" data-from="USD" data-to="JPY"><span class="pair-flags">🇺🇸 <i>→</i> 🇯🇵</span><span class="pair-name">USD <b>/</b> JPY</span><span class="pair-desc">US Dollar to Japanese Yen</span><span class="pair-arrow">↗</span></button>
+      </div>
+    </section>
+    <footer><a class="brand footer-brand" href="#"><span class="brand-mark">↗</span><span>fx<span class="brand-light">studio</span></span></a><span>Designed for a world without borders.</span><span>Rates powered by Frankfurter API</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
