@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag & Drop List</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <a class="brand" href="#">move<span>.</span></a>
+      <span class="status"><i></i> INTERACTIVE PLAYGROUND</span>
+    </header>
+
+    <section class="intro">
+      <span class="eyebrow">ORGANIZE YOUR WORKSPACE</span>
+      <h1>Make room for<br><span>better flow.</span></h1>
+      <p>Drag, drop and rearrange your tasks. Your list, your order.</p>
+    </section>
+
+    <section class="list-panel">
+      <div class="panel-heading">
+        <div>
+          <h2>My task board</h2>
+          <p id="itemCount">5 tasks · Drag to reorder</p>
+        </div>
+        <button id="resetBtn" class="reset-btn">↻ Reset</button>
+      </div>
+
+      <div class="progress-track">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <ul id="taskList" class="task-list">
+        <li class="task-item" draggable="true" data-id="1">
+          <span class="drag-handle" aria-label="Drag handle">⠿</span>
+          <span class="task-icon purple">✎</span>
+          <div class="task-info"><strong>Plan the day</strong><small>PLANNING</small></div>
+          <span class="task-number">01</span>
+        </li>
+        <li class="task-item" draggable="true" data-id="2">
+          <span class="drag-handle" aria-label="Drag handle">⠿</span>
+          <span class="task-icon orange">✦</span>
+          <div class="task-info"><strong>Design the interface</strong><small>DESIGN</small></div>
+          <span class="task-number">02</span>
+        </li>
+        <li class="task-item" draggable="true" data-id="3">
+          <span class="drag-handle" aria-label="Drag handle">⠿</span>
+          <span class="task-icon green">&lt;/&gt;</span>
+          <div class="task-info"><strong>Write the code</strong><small>DEVELOPMENT</small></div>
+          <span class="task-number">03</span>
+        </li>
+        <li class="task-item" draggable="true" data-id="4">
+          <span class="drag-handle" aria-label="Drag handle">⠿</span>
+          <span class="task-icon blue">✓</span>
+          <div class="task-info"><strong>Test the project</strong><small>TESTING</small></div>
+          <span class="task-number">04</span>
+        </li>
+        <li class="task-item" draggable="true" data-id="5">
+          <span class="drag-handle" aria-label="Drag handle">⠿</span>
+          <span class="task-icon pink">↗</span>
+          <div class="task-info"><strong>Launch the website</strong><small>DEPLOYMENT</small></div>
+          <span class="task-number">05</span>
+        </li>
+      </ul>
+
+      <div class="save-note"><span>✦</span> Pick an item and move it where it belongs.</div>
+    </section>
+
+    <footer>
+      <span>BUILT WITH HTML · CSS · JAVASCRIPT</span>
+      <span>LEARN BY BUILDING ↗</span>
+    </footer>
+  </main>
+</body>
+</html>
