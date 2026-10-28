@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <p class="tag">PERSONAL FINANCE</p>
+            <h1>Expense Tracker</h1>
+            <p class="subtitle">Keep track of your daily spending with ease.</p>
+        </div>
+
+        <div class="summary">
+            <div>
+                <span>Total Expenses</span>
+                <h2>₹<span id="totalAmount">0.00</span></h2>
+            </div>
+            <div class="expense-count">
+                <span>Transactions</span>
+                <h3 id="expenseCount">0</h3>
+            </div>
+        </div>
+
+        <div class="expense-form">
+            <h2>Add New Expense</h2>
+
+            <div class="form-row">
+                <div class="input-group">
+                    <label for="expenseName">Expense Name</label>
+                    <input type="text" id="expenseName" placeholder="e.g. Groceries">
+                </div>
+
+                <div class="input-group">
+                    <label for="expenseAmount">Amount</label>
+                    <input type="number" id="expenseAmount" placeholder="e.g. 500">
+                </div>
+            </div>
+
+            <button id="addExpense">Add Expense</button>
+        </div>
+
+        <div class="expense-section">
+            <div class="section-heading">
+                <h2>Recent Expenses</h2>
+                <span id="emptyMessage">No expenses added yet.</span>
+            </div>
+
+            <div id="expenseList"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
